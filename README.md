@@ -2,7 +2,25 @@
 
 # Survivor Options Strategy Backtest
 
-A Python-based backtesting framework for a **NIFTY options strategy** with configurable entry gaps, strike selection logic, stop loss, target, position controls, and performance analytics.
+A Python-based backtesting framework for a **NIFTY options selling strategy** with configurable entry gaps, strike selection logic, stop loss, target, position controls, and performance analytics.
+
+---
+
+# Strategy Highlight
+
+🚀 **Backtested Return (2024)**
+**265.93% annual return on NIFTY options strategy**
+
+This result was generated using the historical **2024 NIFTY spot and options dataset** with predefined risk controls.
+
+The strategy focuses on:
+
+* systematic options selling
+* rule-based entries
+* strict risk management
+* controlled position sizing
+
+⚠️ Results are based on **historical backtesting** and are **not guaranteed future performance**.
 
 ---
 
@@ -31,6 +49,22 @@ The strategy is designed to:
 * P&L analysis
 * Visual performance charts
 * Monthly performance heatmaps
+
+---
+
+# Performance Result
+
+Backtest summary for **2024**
+
+| Metric         | Value           |
+| -------------- | --------------- |
+| Total Return   | **265.93%**     |
+| Strategy Type  | Options Selling |
+| Underlying     | NIFTY 50        |
+| Data Frequency | 1-minute        |
+| Year Tested    | 2024            |
+
+This strategy captures **premium decay and directional movements using systematic entry triggers**.
 
 ---
 
@@ -107,7 +141,7 @@ survivor-options-strategy/
 └── data/
     ├── README.md
     ├── NIFTY_OPTIONS_SAMPLE.parquet
-    └── NIFTY_OPTIONS_2024_CONSOLIDATED.parquet   (generated locally)
+    └── NIFTY_OPTIONS_2024_CONSOLIDATED.parquet
 ```
 
 ---
@@ -153,6 +187,13 @@ pip install -r requirements.txt
 # Disclaimer
 
 This project is intended **for research and educational purposes only**.
-Trading in derivatives involves significant financial risk.
 
----
+The reported **265.93% return is based on historical backtesting using 2024 data** and does not account for:
+
+* transaction costs
+* slippage
+* liquidity constraints
+* execution delays
+
+Real trading performance may differ significantly.
+
