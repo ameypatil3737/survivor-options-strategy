@@ -8,7 +8,7 @@ A Python-based backtesting framework for a systematic NIFTY options selling stra
 # Strategy Highlight
 
 🚀 **Backtested Return (2024)**
-**265.93% annual return on NIFTY options strategy**
+**313.91% annual return on NIFTY options strategy**
 
 This result was generated using the historical **2024 NIFTY spot and options dataset** with predefined risk controls.
 
