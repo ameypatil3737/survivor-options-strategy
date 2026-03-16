@@ -302,3 +302,5 @@ Actual trading results may differ significantly.
 ### Trade-wise Profit / Loss Distribution
 
 ![Trade Distribution](images/Trade-wise Profit_Loss.png)
+
+___
