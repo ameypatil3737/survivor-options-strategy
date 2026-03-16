@@ -86,7 +86,7 @@ Signals are generated using **5-minute candles derived from 1-minute raw data**.
 
 ### Trade-wise Profit / Loss Distribution
 
-![Trade Distribution](Images/Trade-wise Profit_Loss.png)
+![Trade Distribution](Images/Trade-wise_Profit_Loss.png)
 
 ___
 
