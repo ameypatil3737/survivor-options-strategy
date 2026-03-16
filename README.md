@@ -2,7 +2,7 @@
 
 # Survivor Options Strategy Backtest
 
-A Python-based backtesting framework for a systematic NIFTY options selling strategy with configurable entry gaps, strike selection logic, stop loss, target, position controls, and performance analytics. The strategy achieved a 265.93% backtested return in 2024 using historical NIFTY spot and options data.
+A Python-based backtesting framework for a systematic NIFTY options selling strategy with configurable entry gaps, strike selection logic, stop loss, target, position controls, and performance analytics. The strategy achieved a 313.91% backtested return in 2024 using historical NIFTY spot and options data.
 ---
 
 # Strategy Highlight
@@ -57,7 +57,7 @@ Backtest summary for **2024**
 
 | Metric         | Value           |
 | -------------- | --------------- |
-| Total Return   | **265.93%**     |
+| Total Return   | **313.91%**     |
 | Strategy Type  | Options Selling |
 | Underlying     | NIFTY 50        |
 | Data Frequency | 1-minute        |
@@ -187,7 +187,7 @@ pip install -r requirements.txt
 
 This project is intended **for research and educational purposes only**.
 
-The reported **265.93% return is based on historical backtesting using 2024 data** and does not account for:
+The reported **313.91% return is based on historical backtesting using 2024 data** and does not account for:
 
 * transaction costs
 * slippage
