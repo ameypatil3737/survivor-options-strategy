@@ -5,7 +5,22 @@ A Python-based backtesting framework for a systematic **NIFTY options selling st
 The strategy generated **₹6,27,822 backtested profit in 2024**, equivalent to **313.91% return on assumed capital** and **139.52% return on estimated deployed capital**, using historical NIFTY spot and options data.
 
 ---
+## Key Results
 
+Backtest Year: 2024
+
+Total Trades: 863  
+Win Rate: 56.43%  
+Average Trade: ₹727  
+
+Total Profit: ₹6,27,822  
+
+Return on Capital:
+• 313.91% on assumed capital  
+• 139.51% on minimum capital  
+
+Maximum Drawdown: ₹2,61,683
+___
 # Strategy Highlight
 
 🚀 **Backtested Performance (2024)**
