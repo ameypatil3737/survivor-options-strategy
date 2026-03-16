@@ -1,53 +1,64 @@
-
-
 # Survivor Options Strategy Backtest
 
-A Python-based backtesting framework for a systematic NIFTY options selling strategy with configurable entry gaps, strike selection logic, stop loss, target, position controls, and performance analytics. The strategy achieved a 313.91% backtested return in 2024 using historical NIFTY spot and options data.
+A Python-based backtesting framework for a systematic **NIFTY options selling strategy** with configurable entry gaps, strike selection logic, stop loss, target, position controls, and performance analytics.
+
+The strategy generated **₹6,27,822 backtested profit in 2024**, equivalent to **313.91% return on assumed capital** and **139.52% return on estimated deployed capital**, using historical NIFTY spot and options data.
+
 ---
 
 # Strategy Highlight
 
-🚀 **Backtested Return (2024)**
-**313.91% annual return on NIFTY options strategy**
+🚀 **Backtested Performance (2024)**
 
-This result was generated using the historical **2024 NIFTY spot and options dataset** with predefined risk controls.
+**₹6,27,822 total backtested profit**
+**313.91% return on assumed capital**
+**139.52% return on estimated minimum deployed capital**
 
-The strategy focuses on:
+The strategy is designed around:
 
 * systematic options selling
 * rule-based entries
 * strict risk management
 * controlled position sizing
 
-⚠️ Results are based on **historical backtesting** and are **not guaranteed future performance**.
+Results are produced using **historical 2024 NIFTY spot and options data**.
+
+⚠️ Results are based on **historical backtesting** and do **not guarantee future performance**.
 
 ---
 
 # Overview
 
-This project tests a **rule-based options selling strategy on NIFTY spot and options data**.
+This project implements a **rule-based options selling strategy on NIFTY spot and options data**.
 
-The strategy is designed to:
+The framework:
 
-* Monitor **spot price movement**
-* Trigger **PE / CE entries based on configurable gap thresholds**
-* Select **option contracts using strike distance rules**
-* Apply **risk management using stop loss and target**
-* Limit **maximum open positions**
-* Generate **performance analysis and visual summaries**
+* monitors **NIFTY spot price movement**
+* triggers **PE / CE option selling based on gap thresholds**
+* selects option contracts using **strike distance rules**
+* manages risk using **stop loss and target levels**
+* limits **maximum simultaneous open positions**
+* generates **tradebook and performance analytics**
+
+Signals are generated using **5-minute candles derived from 1-minute raw data**.
 
 ---
 
 # Key Features
 
 * User-configurable strategy inputs
-* PE and CE side execution logic
-* Risk controls (stop loss / target / max open positions)
+* Systematic PE and CE execution logic
+* Risk controls
+
+  * stop loss
+  * target
+  * max open positions
 * Backtesting on historical **NIFTY spot and options data**
-* Tradebook generation
-* P&L analysis
-* Visual performance charts
-* Monthly performance heatmaps
+* Automated tradebook generation
+* Strategy P&L calculation
+* Performance charts
+* Monthly P&L heatmaps
+* Risk metrics
 
 ---
 
@@ -55,41 +66,79 @@ The strategy is designed to:
 
 Backtest summary for **2024**
 
-| Metric         | Value           |
-| -------------- | --------------- |
-| Total Return   | **313.91%**     |
-| Strategy Type  | Options Selling |
-| Underlying     | NIFTY 50        |
-| Data Frequency | 1-minute        |
-| Year Tested    | 2024            |
+| Metric                              | Value           |
+| ----------------------------------- | --------------- |
+| Total Profit                        | **₹6,27,822**   |
+| Return on Assumed Capital           | **313.91%**     |
+| Return on Estimated Minimum Capital | **139.52%**     |
+| Total Trades                        | **863**         |
+| Win Rate                            | **56.43%**      |
+| Average Profit per Trade            | **₹727.49**     |
+| Max Drawdown                        | **-₹2,61,683**  |
+| Strategy Type                       | Options Selling |
+| Underlying                          | NIFTY 50        |
+| Raw Data Frequency                  | **1-minute**    |
+| Strategy Execution Frequency        | **5-minute**    |
+| Year Tested                         | **2024**        |
 
-This strategy captures **premium decay and directional movements using systematic entry triggers**.
+This strategy captures **option premium decay and directional movements using systematic entry triggers**.
+
+---
+
+# Best Parameter Setup Found
+
+| Parameter          | Value    |
+| ------------------ | -------- |
+| PE Gap             | **30**   |
+| CE Gap             | **20**   |
+| PE Symbol Gap      | **100**  |
+| CE Symbol Gap      | **100**  |
+| Target %           | **0.70** |
+| Stop Loss %        | **0.50** |
+| Max Open Positions | **3**    |
+
+---
+
+# Capital Interpretation
+
+Based on the backtest:
+
+* **Total backtested profit:** ₹6,27,822
+* **Assumed capital:** ₹2,00,000
+* **Estimated minimum investment capital:** ₹4,50,000
+
+Returns:
+
+* **Return on assumed capital:** 313.91%
+* **Return on estimated minimum capital:** 139.52%
+
+The strategy generated **₹6.27 lakh profit during 2024** with controlled risk parameters and position limits.
 
 ---
 
 # Data
 
-Due to GitHub file size limitations, the **full options dataset (~900MB)** is **not included in this repository**.
+Due to GitHub file size limitations, the **full options dataset (~900MB)** is not included in the repository.
 
-Instead, the repository includes:
+Instead, a **sample dataset** is provided:
 
 ```
 data/NIFTY_OPTIONS_SAMPLE.parquet
 ```
 
-This is a **small sample dataset** provided only to:
+This sample dataset allows users to:
 
-* Understand the **data schema**
-* Test the **code structure**
-* Verify that the notebook runs correctly
+* understand the **data schema**
+* verify that the **notebook runs correctly**
+* test the **strategy logic**
 
-For full backtesting, the **complete dataset must be generated locally**.
+To run a full backtest, the complete dataset must be generated locally.
 
 ---
 
 # How to Generate Full Dataset
 
-### Step 1 — Download raw dataset
+### Step 1 — Download Raw Dataset
 
 Download the historical NIFTY options dataset from Kaggle:
 
@@ -97,7 +146,7 @@ Download the historical NIFTY options dataset from Kaggle:
 
 ---
 
-### Step 2 — Run the data consolidation notebook
+### Step 2 — Run Data Consolidation Notebook
 
 Execute the notebook:
 
@@ -105,9 +154,9 @@ Execute the notebook:
 FNO 2024 Nifty50 Data Consolidator.ipynb
 ```
 
-This notebook processes the downloaded expiry-wise files and generates a **single consolidated dataset required by the strategy**.
+This notebook processes expiry-wise files and produces a **single consolidated dataset** required by the strategy.
 
-It will produce:
+The output file will be:
 
 ```
 NIFTY_OPTIONS_2024_CONSOLIDATED.parquet
@@ -115,7 +164,7 @@ NIFTY_OPTIONS_2024_CONSOLIDATED.parquet
 
 ---
 
-### Step 3 — Place file inside the data folder
+### Step 3 — Place File in Data Folder
 
 Move the generated file into:
 
@@ -123,7 +172,7 @@ Move the generated file into:
 data/NIFTY_OPTIONS_2024_CONSOLIDATED.parquet
 ```
 
-Once this file is present, the **backtest notebook will run using the full dataset**.
+Once this file is available, the **backtest notebook can run using the full dataset**.
 
 ---
 
@@ -147,37 +196,40 @@ survivor-options-strategy/
 
 # Strategy Inputs
 
-The notebook allows users to configure:
+Users can configure the following parameters:
 
 * PE gap trigger
 * CE gap trigger
-* Stop loss %
-* Target %
-* Lot size
-* Strike step
-* Square-off time
-* Max open positions
-* Backtest date range
+* stop loss percentage
+* target percentage
+* lot size
+* strike step
+* square-off time
+* maximum open positions
+* backtest date range
+
+These inputs allow testing multiple parameter combinations and optimizing strategy performance.
 
 ---
 
 # Outputs
 
-The framework generates:
+The framework produces:
 
 * Tradebook
 * Strategy P&L
+* Equity curve
 * Performance charts
 * Monthly P&L heatmaps
-* Risk metrics
+* Risk statistics
 
 ---
 
 # Requirements
 
-Install dependencies:
+Install required Python dependencies:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
@@ -187,12 +239,17 @@ pip install -r requirements.txt
 
 This project is intended **for research and educational purposes only**.
 
-The reported **313.91% return is based on historical backtesting using 2024 data** and does not account for:
+The reported performance of:
+
+* **₹6,27,822 profit**
+* **313.91% return on assumed capital**
+* **139.52% return on estimated deployed capital**
+
+is based on **historical backtesting using 2024 data** and does not account for:
 
 * transaction costs
 * slippage
 * liquidity constraints
 * execution delays
 
-Real trading performance may differ significantly.
-
+Actual trading results may differ significantly.
