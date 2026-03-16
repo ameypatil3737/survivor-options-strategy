@@ -278,28 +278,30 @@ Actual trading results may differ significantly.
 
 ### Equity Curve
 
-![Equity Curve](Image/equity_curve.png)
+![Equity Curve](Images/equity_curve.png)
 
 ---
 
 ### Cumulative P&L Curve
 
-![Cumulative P&L](Image/PNL.png)
+![Cumulative P&L](Images/PNL.png)
 
 ---
 
 ### Monthly P&L Heatmap
 
-![Monthly Heatmap](Image/Monthly_Heatmap.png)
+![Monthly Heatmap](Images/Monthly_Heatmap.png)
 
 ---
 
 ### Daily P&L Calendar Heatmap
 
-![Daily Calendar Heatmap](Image/Daily_Calendar_Heatmap.png)
+![Daily Calendar Heatmap](Images/Daily_Calendar_Heatmap.png)
 
 ---
 
 ### Trade-wise Profit / Loss Distribution
 
-![Trade Distribution](Image/Trade-wise Profit_Loss.png)
+![Trade Distribution](Images/Trade-wise Profit_Loss.png)
+
+___
